@@ -6,3 +6,57 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/* universal reset for browser abnormality*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*changes to box model so boarders and headings no longer
+    added to total width v_below_v*/
+}
+/* Us the power of inheritance of CSS classes 
+to set these values for all children
+SET ALL BODY WIDE STYLES
+*/
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /*set height of default lines? */
+    line-height: 1.7;
+    color: #777;
+    /*Creates nice white background/grey body border near edges*/
+    padding: 30px;
+    
+}
+
+.header{
+    /* set how much % of the viewport this element takes up*/
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126,213,111,.8),
+        rgba(40, 180, 131,.8)),
+         url('../img/hero.jpg');
+    /* Ensures image is scaled correctly to fill the viewport */
+    background-size: cover;
+    /* Ensures that the scaling is fixed to keep the top visible  */
+    background-position: top;
+    position: relative;
+    /* t-left, t-right, bleft, b-right
+    x should be one hundred percent away
+    */
+    /* Sepcify a point on the canvas with a polygon
+    google Clippy for custom shapes*/
+    clip-path: polygon(0 0, 100% 0, 100% 82vh,0 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+
+}
